@@ -1,0 +1,10 @@
+type Portfolio @model {
+  id: ID!
+  name: String!
+  positions: [Position] @connection(name: "PortfolioPositions")
+}
+type Position @model {
+  id: ID!
+  symbol: String!
+  portfolio: Portfolio @connection(name: "PortfolioPositions")
+}

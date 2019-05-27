@@ -1,0 +1,10 @@
+{
+    "AppSyncApiName": "amplifystockapp",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authamplifystockappf282fc8a",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

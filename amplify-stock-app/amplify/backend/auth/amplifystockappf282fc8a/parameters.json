@@ -1,0 +1,68 @@
+{
+    "identityPoolName": "amplifystockappf282fc8a_identitypool_f282fc8a",
+    "allowUnauthenticatedIdentities": false,
+    "lambdaLogPolicy": "amplif_f282fc8a_lambda_log_policy",
+    "openIdLambdaRoleName": "amplif_f282fc8a_openid_lambda_role",
+    "openIdRolePolicy": "amplif_f282fc8a_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "amplif_f282fc8a_openid_lambda_iam_policy",
+    "openIdLogPolicy": "amplif_f282fc8a_openid_lambda_log_policy",
+    "userPoolName": "amplifystockappf282fc8a_userpool_f282fc8a",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "ampliff282fc8a_sns-role",
+    "roleExternalId": "ampliff282fc8a_role_external_id",
+    "policyName": "ampliff282fc8a-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientName": "ampliff282fc8a_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "ampliff282fc8a_totp_lambda_role",
+    "mfaLambdaLogPolicy": "ampliff282fc8a_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "ampliff282fc8a_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "ampliff282fc8a_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "ampliff282fc8a_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "ampliff282fc8a_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "ampliff282fc8a_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "resourceName": "amplifystockappf282fc8a",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "default"
+}
